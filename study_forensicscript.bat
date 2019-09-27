@@ -124,7 +124,6 @@ echo 5_ Checking for autorunsc
 %_ToolPath_sys%\autorunsc.exe -h > %autorunsc_PATH%\autorunsc-hash.txt
 
 
-
 :: ------------ Memory
 :: [+] Memory Dump Execute? (y/n): y
 if not exist %_path%\memory (
@@ -143,7 +142,6 @@ if "%isMemoryDump%" == "yes" (
 %_ToolPath_memory%\FDPro.exe %memory_PATH%\memdump.dd
 
 
-
 :: ------------ Pakcet Dump
 if not exist %_path%\Packet_Dump (
    mkdir  %_path%\Packet_Dump
@@ -159,7 +157,6 @@ if "%isPacketDump%" == "yes" (
  
 :acquire_packetDump
 %_ToolPath_packet%\tcpdump.exe -D
-
 
 :SELECT_NIC
 set /p_NIC=What's the NIC number you want to acquire (1,2,3...)? || goto :SELECT_NIC
